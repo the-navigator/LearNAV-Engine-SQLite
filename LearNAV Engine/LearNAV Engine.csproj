@@ -50,6 +50,7 @@
     <Compile Include="Filter.cs" />
     <Compile Include="LogInCheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLCmn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

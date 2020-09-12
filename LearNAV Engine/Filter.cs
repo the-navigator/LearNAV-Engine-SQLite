@@ -19,15 +19,15 @@ namespace LearNAV_Engine
         static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\LEARNAV.DB;Version=3"; //Datbase is yet to be finished
         SQLiteConnection db_cn = new SQLiteConnection(connection_string);
 
-        SQLiteDataAdapter da;
-           public DataTable dt;
+      public   SQLiteDataAdapter da;
+           public DataTable dt_filter;
       //string table_src = "ResourceDB";
 
         public void FilterName(string to_filter) 
         {
            db_cn.Open();
-           da = new SQLiteDataAdapter("SELECT * FROM ResourceDB WHERE ResourceN like '%" + to_filter + "%'", db_cn);
-           da.Fill(dt);
+           da = new SQLiteDataAdapter("SELECT * FROM ResourceDB WHERE ResourceN LIKE '%" + to_filter + "&'", db_cn);
+           da.Fill(dt_filter);
            db_cn.Close();
      
         }

@@ -28,7 +28,7 @@ namespace LearNAV_Engine
                     using (dt)
                     {
                         DataView dv = dt.DefaultView;
-                        dv.RowFilter = "ID like '%" + search_what  + "&'";
+                        dv.RowFilter = "ID LIKE '%" + Convert.ToInt32(search_what)  + "&'";
                         dt2 = dv.ToTable();
                     }
                     break;
@@ -99,6 +99,28 @@ namespace LearNAV_Engine
                         break;
 
                 }
+            }
+        }
+
+        public void Perform_Search_by_GLevel(string glvl, string what_to, string search_what)
+        {
+             switch (what_to)
+            {
+                case "ID":
+                    da = new SQLiteDataAdapter("SELECT * FROM [ResourceDB] WHERE GradeLevel LIKE '%" + glvl + "%' AND ID LIKE '%" + Convert.ToInt32(search_what) + "%'" , db_cn);
+                    da.Fill(dt);
+                  
+                    break;
+                case "Author":
+                  da = new SQLiteDataAdapter("SELECT * FROM [ResourceDB] WHERE GradeLevel LIKE '%" + glvl + "%' AND Author LIKE '%" + search_what + "%'" , db_cn);
+                    da.Fill(dt);
+            
+                    break;
+                case "Tags":
+                  da = new SQLiteDataAdapter("SELECT * FROM [ResourceDB] WHERE GradeLevel LIKE '%" + glvl + "%' AND w_tags LIKE '%" + search_what + "%'" , db_cn);
+                    da.Fill(dt);
+  
+                    break;
             }
         }
 

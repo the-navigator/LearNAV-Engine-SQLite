@@ -53,6 +53,12 @@ namespace LearNAV_Engine
     	public string rsc_dte_ad; 
     	public string rsctags;
     	public int rsc_file_size;
+    	public string doc_type;
+    	/*
+    	DOCUMENT TYPES:
+    	-Document-
+    	*/
+
 
     	//Binary Reader
     	public FileStream SandBox_FileStream;
