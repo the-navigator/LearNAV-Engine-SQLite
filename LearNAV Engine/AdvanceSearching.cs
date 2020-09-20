@@ -12,7 +12,7 @@ namespace LearNAV_Engine
    public class AdvanceSearching
     {
 
-        static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\LEARNAV.DB;Version=3"; //Datbase is yet to be finished
+        static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\Libre.DB;Version=3"; //Datbase is yet to be finished
         SQLiteConnection db_cn = new SQLiteConnection(connection_string);
        SQLiteDataAdapter da = new SQLiteDataAdapter();
     public DataTable dt = new DataTable();
@@ -28,7 +28,7 @@ namespace LearNAV_Engine
                     using (dt)
                     {
                         DataView dv = dt.DefaultView;
-                        dv.RowFilter = "ID like '%" + search_what  + "&'";
+                        dv.RowFilter = "ID like '%" + Convert.ToInt32(search_what)  + "&'";
                         dt2 = dv.ToTable();
                     }
                     break;
