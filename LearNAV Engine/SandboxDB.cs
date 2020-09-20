@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
+using System.Data.SQLite;
+using System.IO;
 
 namespace LearNAV_Engine
 {
@@ -34,14 +36,15 @@ namespace LearNAV_Engine
     	//VARIABLES//**********************************************************************************************
     	
     	//ORIGINS
-    	static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\LEARNAV.DB;Version=3";
-    	SQLiteConnection db_commit_connection = new SQLiteConnection(connection_string); //Commit Connection
-    	SQLiteConnection db_read_connection = new SQLiteConnection(connection_string); //Read Connection
-    	SQLiteConnection db_filter_connection = new SQLiteConnection(connection_string); //FILTER FUNCTIONS Conection
-		
+       /*
+    	 string connectionstring = "DataSource=" + Environment.CurrentDirectory + "\\SandBoxDB\\SANDBOX_DB_v1.DB;Version=3";
+    	SQLiteConnection db_commit_connection = new SQLiteConnection(connectionstring); //Commit Connection
+    	SQLiteConnection db_read_connection = new SQLiteConnection(connectionstring); //Read Connection
+    	SQLiteConnection db_filter_connection = new SQLiteConnection(connectionstring); //FILTER FUNCTIONS Conection
+		*/
 		//QueryVariables
-    	SQLiteComamand insert_func = new SQLiteComamand(); //Insert Command
-    	SQLiteCommand read_tbl = new SQLiteComamand (); //Read Command - MULTI-PUPOSE
+    	SQLiteCommand insert_func = new SQLiteCommand(); //Insert Command
+    	SQLiteCommand read_tbl = new SQLiteCommand (); //Read Command - MULTI-PUPOSE
     	// Used for both reading all data and filter
 
     	
@@ -66,7 +69,7 @@ namespace LearNAV_Engine
     	
 
     	//COMMANDS
-    	string insertQuery = "INSERT INTO SandBox_Storage(ResourceName, ResourceLocation , ResourceExtension , RAuthor , DateAdded , Tags , ActualFile, FileSize ) VALUES (@Rname,@Rloc,@RExt,@RAuthor,@DateAd,@Tags,@BLOBdata,@BLOBFileSize);";
+    	const string insertQuery = "INSERT INTO SandBox_Storage(ResourceName, ResourceLocation , ResourceExtension , RAuthor , DateAdded , Tags , ActualFile, FileSize ) VALUES (@Rname,@Rloc,@RExt,@RAuthor,@DateAd,@Tags,@BLOBdata,@BLOBFileSize);";
     	string GeneralreadQuery = "SELECT * FROM (SandBox_Storage)";
 
     	//VARIABLES//**********************************************************************************************
@@ -75,16 +78,17 @@ namespace LearNAV_Engine
     	Enters Data to Database According to User
     	//issues: Add MD5 Checking of Files Added to safecheck them for potential Malware/Exploit Files
     	*/
+       /*
     	public void CommitData()
     	{
     		//FileStream
-    		SandBox_FileStream = new FileStream(rsc_loc, FileMode.Open, FileA	ccess.Read);
+    		SandBox_FileStream = new FileStream(rsc_loc, FileMode.Open, FileAccess.Read());
     		BinaryReader Sandbox_BinRdr = new BinaryReader(SandBox_FileStream);
     		rsc_file_size = Convert.ToInt32(SandBox_FileStream.Length);
     		byte[] SandBox_Byte_BLOB = Sandbox_BinRdr.ReadBytes(rsc_file_size);
 
     		//Query Function
-    		insert_func  = new SQLiteComamand(insertQuery, db_commit_connection);
+    		insert_func  = new SQLiteCommand(insertQuery, db_commit_connection);
     		db_commit_connection.Open();
     			insert_func.Parameters.AddWithValue("@Rname", (rsc_name));
     			insert_func.Parameters.AddWithValue("@Rloc", (rsc_loc));
@@ -110,12 +114,12 @@ namespace LearNAV_Engine
     	/*
     	FUNCTION - FILTERS
     	*/
-
+       /*
     	public void QuickSearchName(string search_item)
     	{
-    		db_read_connection.Open();
+    		//db_read_connection.Open();
     		SANDBOX_da = new SQLiteDataAdapter("SELECT * FROM (SandBox_Storage) WHERE ResourceName LIKE '%" + 
-    			search_item + "%'", db_filter_connection);
+    		//	search_item + "%'", db_filter_connection);
     		SANDBOX_da.Fill(SANDBOX_dt);
     	}
 		/*
