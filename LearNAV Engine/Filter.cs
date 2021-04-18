@@ -16,7 +16,7 @@ namespace LearNAV_Engine
            OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.14.0; Data Source = " +
            Environment.CurrentDirectory + "\\" + "LearNAV_DB2.accdb");
            */
-        static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\LEARNAV.DB;Version=3"; //Datbase is yet to be finished
+        static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\LEARNAV.DB;Version=3"; //Database is yet to be finished
         SQLiteConnection db_cn = new SQLiteConnection(connection_string);
 
         SQLiteDataAdapter da;
