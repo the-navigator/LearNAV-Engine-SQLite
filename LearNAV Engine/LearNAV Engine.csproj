@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="AdvanceSearching.cs" />
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="EG_DICTIONARY.cs" />
+    <Compile Include="EG_SELECT-DATABASE.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="LogInCheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

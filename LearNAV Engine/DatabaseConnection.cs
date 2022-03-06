@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
-using System.Data.SQLite;
 
 
 namespace LearNAV_Engine
@@ -13,19 +12,13 @@ namespace LearNAV_Engine
     public class DatabaseConnection
     {
         static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\LEARNAV.DB;Version=3"; //Datbase is yet to be finished
-      /*
-      [OBSELETE, THIS IS FOR MS ACCESS CONNECTION]
-        private SQLiteConnection db_cn = new
-            SQLiteConnection(@"Provider = Microsoft.ACE.SQLite.12.0; Data Source = " +
-            Environment.CurrentDirectory + "\\" + "LearNAV_DB2.accdb");
-        */
-    
-      //  important variables for providing data
+        static string connection_string_test = "DataSource=" + EG_DICTIONARY.DatabasePath;
+        
         SQLiteConnection db_cn = new SQLiteConnection(connection_string);
         SQLiteCommand list_Con = new SQLiteCommand();
         SQLiteCommand comn = new SQLiteCommand();
         SQLiteDataAdapter da = new SQLiteDataAdapter();
-         public DataTable dt = new DataTable();
+        public DataTable dt = new DataTable();
 
 
         //VARIABLES

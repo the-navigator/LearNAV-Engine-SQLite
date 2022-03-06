@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
-using System.Data.SQLite;
 using System.IO;
 
 namespace LearNAV_Engine

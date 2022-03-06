@@ -12,9 +12,9 @@ namespace LearNAV_Engine
    public class AdvanceSearching
     {
 
-        static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\Libre.DB;Version=3"; //Datbase is yet to be finished
-        SQLiteConnection db_cn = new SQLiteConnection(connection_string);
-       SQLiteDataAdapter da = new SQLiteDataAdapter();
+    static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\Libre.DB;Version=3"; //Datbase is yet to be finished
+    SQLiteConnection db_cn = new SQLiteConnection(connection_string);
+    SQLiteDataAdapter da = new SQLiteDataAdapter();
     public DataTable dt = new DataTable();
     public DataTable dt2 = new DataTable();
 

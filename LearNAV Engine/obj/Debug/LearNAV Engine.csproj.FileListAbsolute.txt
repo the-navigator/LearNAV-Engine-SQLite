@@ -4,3 +4,15 @@ C:\Users\hp\Documents\Visual Studio 2012\Projects\LearNAV Engine\LearNAV Engine\
 C:\Users\hp\Documents\Visual Studio 2012\Projects\LearNAV Engine\LearNAV Engine\obj\Debug\LearNAV Engine.pdb
 C:\Users\hp\Documents\Visual Studio 2012\Projects\LearNAV Engine\LearNAV Engine\bin\Debug\System.Data.SQLite.dll
 C:\Users\hp\Documents\Visual Studio 2012\Projects\LearNAV Engine\LearNAV Engine\bin\Debug\System.Data.SQLite.xml
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\obj\Debug\LearNAV Engine.csproj.AssemblyReference.cache
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\obj\Debug\LearNAV Engine.csproj.CoreCompileInputs.cache
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\obj\Debug\LearNAV Engine.dll
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\obj\Debug\LearNAV Engine.pdb
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\bin\Debug\LearNAV Engine.dll
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\bin\Debug\LearNAV Engine.pdb
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\bin\Debug\Newtonsoft.Json.dll
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\bin\Debug\System.Data.SQLite.dll
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\bin\Debug\Newtonsoft.Json.xml
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\bin\Debug\System.Data.SQLite.xml
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\bin\Debug\System.Data.SQLite.dll.config
+D:\LIBRE\LIBRE\LearNAV-Engine-SQLite\LearNAV Engine\obj\Debug\LearNAV Engine.csproj.CopyComplete

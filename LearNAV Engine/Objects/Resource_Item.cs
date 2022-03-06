@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
-using System.Data.SQLite;
+
 
 
 namespace LearNAV_Engine
@@ -28,10 +28,7 @@ namespace LearNAV_Engine
 
       }
 
-      public static string Object_Info
-      {
-
-      }
+    
 
   
     }

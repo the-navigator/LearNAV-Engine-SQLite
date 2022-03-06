@@ -14,7 +14,7 @@ namespace LearNAV_Engine
     
   public class LoadData
     {
-        static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\LEARNAV.DB;Version=3"; //Datbase is yet to be finished
+     static string connection_string = "DataSource=" + Environment.CurrentDirectory + "\\LEARNAV.DB;Version=3"; //Datbase is yet to be finished
      public SQLiteConnection db_cn =new SQLiteConnection(connection_string);
       private SQLiteDataAdapter da = new SQLiteDataAdapter();
       public DataTable dt = new DataTable();
